@@ -5,8 +5,10 @@ sum-test: sum.o main.o
 	g++ -o sum-test sum.o main.o
 
 main.o: sum.h main.cpp
+	g++ -o main.o sum.h main.cpp
 
 sum.o: sum.h sum.cpp
+	g++ -o sum.o sum.h sum.cpp
 
 clean:
 	rm -f sum-test
